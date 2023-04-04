@@ -3,7 +3,6 @@ package ua.bykadoroff.hw5;
 public class Task1 {
     public static void main(String[] args) {
         int[][] array = fillArrayVeryVeryVeryStrangeWay(6, 6);
-
     }
 
     public static int[][] fillArrayVeryVeryVeryStrangeWay(int size1, int size2) {
