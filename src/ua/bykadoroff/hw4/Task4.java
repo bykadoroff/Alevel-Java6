@@ -7,17 +7,19 @@ public class Task4 {
     public static void main(String[] args) {
         int[] array = fillAndCreateArray(2000);
         System.out.println(Arrays.toString(array));
-        changeEvenNumbers(array);
-        System.out.println(Arrays.toString(array));
+        System.out.println(Arrays.toString(changeEvenNumbers(array)));
     }
 
     public static int[] changeEvenNumbers(int[] array) {
+        int[] arrayCopy = new int[array.length];
+
         for (int i = 0; i < array.length; i++) {
-            if (array[i] % 2 == 0) {
-                array[i] = 0;
+            arrayCopy[i] = array[i];
+            if (arrayCopy[i] % 2 == 0) {
+                arrayCopy[i] = 0;
             }
         }
-        return array;
+        return arrayCopy;
     }
 
     public static int[] fillAndCreateArray(int size) {

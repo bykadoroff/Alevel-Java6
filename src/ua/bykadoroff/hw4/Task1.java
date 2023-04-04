@@ -33,7 +33,6 @@ public class Task1 {
         int nums[] = new int[size];
         for (int i = 0; i < nums.length; i++) {
             nums[i] = ThreadLocalRandom.current().nextInt(1, 11);
-            // System.out.println("nums [" + i +"] " + nums[i]);
         }
         return nums;
     }
