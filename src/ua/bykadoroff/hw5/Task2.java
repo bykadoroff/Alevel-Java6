@@ -18,9 +18,10 @@ public class Task2 {
         for (int i = 1; i < array.length; i++) {
             if (array[i - 1] <= array[i]) {
                 isSorted = true;
-                continue;
-            } else isSorted = false;
-            break;
+            } else {
+                isSorted = false;
+                break;
+            }
         }
         return isSorted;
     }
