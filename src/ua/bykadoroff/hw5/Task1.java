@@ -3,6 +3,7 @@ package ua.bykadoroff.hw5;
 public class Task1 {
     public static void main(String[] args) {
         int[][] array = fillArrayVeryVeryVeryStrangeWay(6, 6);
+        showArrays(array);
     }
 
     public static int[][] fillArrayVeryVeryVeryStrangeWay(int size1, int size2) {
@@ -15,16 +16,22 @@ public class Task1 {
             if (i % 2 != 0) {
                 for (int j = 0; j < array.length; j++) {
                     array[i][j] = (num++) * (sign);
-                    System.out.print(array[i][j] + "\t   ");
                 }
             } else {
                 for (int j = 0; j < array.length; j++) {
                     array[i][j] = num++;
-                    System.out.print(array[i][j] + "\t   ");
                 }
+            }
+        }
+        return array;
+    }
+
+    public static void showArrays(int array[][]) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.print(array[i][j] + "\t    ");
             }
             System.out.println();
         }
-        return array;
     }
 }
