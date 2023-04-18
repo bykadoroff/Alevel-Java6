@@ -12,9 +12,8 @@ public class Practice2 {
         int boysAmount = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 0) {
-                array[i] = Math.abs(array[i]);
                 boysAmount++;
-                heightsOfAllBoys += array[i];
+                heightsOfAllBoys += Math.abs(array[i]);
             }
         }
         double  averageHeight = heightsOfAllBoys / boysAmount;
