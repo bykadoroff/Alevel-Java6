@@ -16,10 +16,6 @@ public class Task3 {
                 arrayCopy[j][i] = array[i][j];
             }
         }
-        for (int i = 0; i < arrayCopy.length; i++) {
-            for (int j = 0; j < arrayCopy.length; j++) {
-            }
-        }
         return arrayCopy;
     }
 
