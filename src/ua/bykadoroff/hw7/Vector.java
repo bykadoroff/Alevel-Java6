@@ -18,7 +18,8 @@ public class Vector {
     }
 
     public double length() {
-        return (double) Math.sqrt((x * x) + (y * y) + (z * z));
+
+        return Math.sqrt((x * x) + (y * y) + (z * z));
     }
 
     @Override
@@ -39,8 +40,8 @@ public class Vector {
 
     public double cosVector(Vector vector) {
         return (this.x * vector.x + this.y * vector.y + this.z * vector.z)
-                / (Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z)) *
-                (Math.sqrt(vector.x * vector.x + vector.y * vector.y + vector.z * vector.z));
+                / ((Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z)) *
+                (Math.sqrt(vector.x * vector.x + vector.y * vector.y + vector.z * vector.z)));
     }
 
     public Vector sumVector(Vector vector) {
@@ -57,8 +58,8 @@ public class Vector {
         return new Vector(x, y, z);
     }
 
-    public static Vector[] arrayVectors(int N) {
-        Vector[] array = new Vector[N];
+    public static Vector[] arrayVectors(int n) {
+        Vector[] array = new Vector[n];
         for (int i = 0; i < array.length; i++) {
             double x = ThreadLocalRandom.current().nextDouble(-100.0, 100.0);
             double y = ThreadLocalRandom.current().nextDouble(-100.0, 100.0);
