@@ -12,13 +12,10 @@ public class Task1 {
         int sign = -1;
 
         for (int i = 0; i < array.length; i++) {
-
-            if (i % 2 != 0) {
-                for (int j = 0; j < array.length; j++) {
+            for (int j = 0; j < array[i].length; j++) {
+                if (i % 2 != 0) {
                     array[i][j] = (num++) * (sign);
-                }
-            } else {
-                for (int j = 0; j < array.length; j++) {
+                } else {
                     array[i][j] = num++;
                 }
             }
