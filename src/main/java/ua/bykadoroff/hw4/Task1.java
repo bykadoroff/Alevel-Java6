@@ -5,8 +5,13 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Task1 {
     public static void main(String[] args) {
         int array[] = fillAndCreateArray(400);
+        int arrayTest[] = {1, -2, -3, -4, 5};
+
         System.out.println("Arithmetic average = " + averageMath(array));
         System.out.println("Geometry mean = " + geometryMean(array));
+        System.out.println(geometryMean(arrayTest));
+
+
     }
 
     public static double geometryMean(int[] array) {
