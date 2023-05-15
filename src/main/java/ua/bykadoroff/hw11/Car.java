@@ -1,86 +1,92 @@
 package ua.bykadoroff.hw11;
 
-public class Car {
- private String model;
- private int year;
- private String color;
- private double fuelTank;
- private double fuelInTank;
- private double fuelPerKilometers;
+public class Car implements Recovery {
+    private String model;
+    private int year;
+    private String color;
+    private double fuelTank;
+    private double fuelInTank;
+    private double fuelPerKilometers;
 
- public Car (String model, int year, String color, double fuelTank, double fuelInTank, double fuelPerKilometers){
-  this.model = model;
-  this.year = year;
-  this.color = color;
-  this.fuelTank = fuelTank;
-  this.fuelInTank = fuelInTank;
-  this.fuelPerKilometers = fuelPerKilometers;
- }
+    public Car(String model, int year, String color, double fuelTank, double fuelInTank, double fuelPerKilometers) {
+        this.model = model;
+        this.year = year;
+        this.color = color;
+        this.fuelTank = fuelTank;
+        this.fuelInTank = fuelInTank;
+        this.fuelPerKilometers = fuelPerKilometers;
+    }
 
-  protected void run(){
-  if (getFuelInTank() > 0){
-   System.out.println("Car is running");
-   setFuelInTank(getFuelTank() - getFuelPerKilometers() );
-  }
-  else {
-   System.out.println("Fuel tank is empty");
-  }
- }
+    protected void run() {
+        if (getFuelInTank() > 0) {
+            System.out.println("Car is running");
+            setFuelInTank(getFuelTank() - getFuelPerKilometers());
+        } else {
+            System.out.println("Fuel tank is empty");
+        }
+    }
 
- protected void showStatistic(){
-  System.out.println("This model: " + model);
-  System.out.println("Year: " + year);
-  System.out.println("Color: " + color);
-  System.out.println("Fuel tank: " + fuelTank);
-  System.out.println("Fuel in the tank: " + fuelInTank);
-  System.out.println("Fuel per 100 kilometers: " + fuelPerKilometers);
- }
+    protected void showStatistic() {
+        System.out.println("This model: " + model);
+        System.out.println("Year: " + year);
+        System.out.println("Color: " + color);
+        System.out.println("Fuel tank: " + fuelTank);
+        System.out.println("Fuel in the tank: " + fuelInTank);
+        System.out.println("Fuel per 100 kilometers: " + fuelPerKilometers);
+    }
 
- public String getModel() {
-  return model;
- }
+    @Override
+    public void refuel() {
+        setFuelInTank(getFuelTank());
+    }
 
- public int getYear() {
-  return year;
- }
+    public String getModel() {
 
- public String getColor() {
-  return color;
- }
+        return model;
+    }
 
- public double getFuelTank() {
-  return fuelTank;
- }
+    public int getYear() {
 
- public double getFuelInTank() {
-  return fuelInTank;
- }
+        return year;
+    }
 
- public double getFuelPerKilometers() {
-  return fuelPerKilometers;
- }
+    public String getColor() {
+        return color;
+    }
 
- public void setModel(String model) {
-  this.model = model;
- }
+    public double getFuelTank() {
+        return fuelTank;
+    }
 
- public void setYear(int year) {
-  this.year = year;
- }
+    public double getFuelInTank() {
+        return fuelInTank;
+    }
 
- public void setColor(String color) {
-  this.color = color;
- }
+    public double getFuelPerKilometers() {
+        return fuelPerKilometers;
+    }
 
- public void setFuelTank(double fuelTank) {
-  this.fuelTank = fuelTank;
- }
+    public void setModel(String model) {
+        this.model = model;
+    }
 
- public void setFuelInTank(double fuelInTank) {
-  this.fuelInTank = fuelInTank;
- }
+    public void setYear(int year) {
+        this.year = year;
+    }
 
- public void setFuelPerKilometers(double fuelPerKilometers) {
-  this.fuelPerKilometers = fuelPerKilometers;
- }
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setFuelTank(double fuelTank) {
+        this.fuelTank = fuelTank;
+    }
+
+    public void setFuelInTank(double fuelInTank) {
+        this.fuelInTank = fuelInTank;
+    }
+
+    public void setFuelPerKilometers(double fuelPerKilometers) {
+        this.fuelPerKilometers = fuelPerKilometers;
+    }
 }

@@ -24,10 +24,6 @@ public class Aspirant extends Student {
         return Objects.hash(super.hashCode(), aspirantWork);
     }
 
-    public int hashCodeObject() {
-        return super.hashCode();
-    }
-
     public Aspirant() {
 
     }

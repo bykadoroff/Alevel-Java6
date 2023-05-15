@@ -31,10 +31,6 @@ public class Student {
         return Objects.hash(firstName, lastName, group, averageMark);
     }
 
-    public int hashCodeObject() {
-        return super.hashCode();
-    }
-
     public Student() {
 
     }

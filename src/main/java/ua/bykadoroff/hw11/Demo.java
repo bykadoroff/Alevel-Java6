@@ -26,10 +26,7 @@ public class Demo {
         System.out.println(studentsArray[3].equals(studentsArray[5]));
         System.out.println(studentsArray[0].hashCode());
         System.out.println(studentsArray[1].hashCode());
-        System.out.println("studentsArray 3 (@Overrided Hashcode)" + studentsArray[3].hashCode());
-        System.out.println("studentsArray 5 (@Overrided Hashcode)" + studentsArray[5].hashCode());
-        System.out.println("studentsArray 3 (HashCode from Object class) " + studentsArray[3].hashCodeObject());
-        System.out.println("studentsArray 5 (HashCode from Object class) " + studentsArray[5].hashCodeObject());
-
+        System.out.println("studentsArray 3 " + studentsArray[3].hashCode());
+        System.out.println("studentsArray 5 " + studentsArray[5].hashCode());
     }
 }
