@@ -1,5 +1,8 @@
 package ua.bykadoroff.hw11;
 
+import ua.bykadoroff.hw10.Aspirant;
+import ua.bykadoroff.hw10.Student;
+
 public class Demo {
     public static void main(String[] args) {
 
