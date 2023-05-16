@@ -1,6 +1,8 @@
 package ua.bykadoroff.hw10;
 
+
 import java.util.Objects;
+
 
 public class Student {
     String firstName;
@@ -14,6 +16,7 @@ public class Student {
         this.group = group;
         this.averageMark = score;
     }
+
 
     @Override
     public boolean equals(Object o) {

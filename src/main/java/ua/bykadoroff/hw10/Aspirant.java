@@ -1,6 +1,8 @@
 package ua.bykadoroff.hw10;
 
+
 import java.util.Objects;
+
 
 public class Aspirant extends Student {
     String aspirantWork;
@@ -10,7 +12,7 @@ public class Aspirant extends Student {
         this.aspirantWork = aspirantWork;
     }
 
-    @Override
+
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -23,6 +25,7 @@ public class Aspirant extends Student {
     public int hashCode() {
         return Objects.hash(super.hashCode(), aspirantWork);
     }
+
 
     public Aspirant() {
 
