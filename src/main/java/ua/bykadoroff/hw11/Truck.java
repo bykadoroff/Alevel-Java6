@@ -10,11 +10,11 @@ public class Truck extends Car implements Recovery {
         this.cargo = cargo;
     }
 
-    protected void addCargo(boolean someBox) {
+    protected void addCargo() {
         someBox = true;
     }
 
-    protected void getCargo(boolean someBox) {
+    protected void getCargo() {
         someBox = false;
     }
 
