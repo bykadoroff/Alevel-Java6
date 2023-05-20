@@ -15,7 +15,7 @@ class PhoneBook {
         Optional<Integer> indexOfNumber = phoneBook.findIndexByPhoneNumber("016/161617");
         if (indexOfNumber.isPresent()){
             System.out.println("Index of number is " +indexOfNumber.get());
-        } if (indexOfNumber.isEmpty()){
+        } else {
             System.out.println("Not found");
         }
     }
