@@ -1,23 +1,36 @@
 package ua.bykadoroff.hw12;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class Task3 {
 
-    void printExc(int num) throws ExceptionOne, ExceptionTwo, ExceptionThree {
+    public static void main(String[] args){
 
-        if (num < 0) {
-            throw new ExceptionOne();
+        try {
+            printExc();
+        } catch (ExceptionOne | ExceptionTwo | ExceptionThree excId1) {
+            System.err.println(excId1.getMessage());
         }
-        if (num == 0) {
+    }
+
+    static void printExc() throws ExceptionOne, ExceptionTwo, ExceptionThree {
+
+        int num = ThreadLocalRandom.current().nextInt(1, 4);
+
+        if (num == 1) {
+            throw new ExceptionOne("ExceptionOne");
+        }
+        if (num == 2) {
             throw new ExceptionTwo("ExceptionTwo");
         }
-        if (num > 0) {
+        if (num == 3) {
             throw new ExceptionThree("ExceptionThree", new Throwable());
         }
     }
 }
 
 class ExceptionOne extends Exception {
-    public ExceptionOne() {
+    public ExceptionOne(String msg) {
     }
 }
 
