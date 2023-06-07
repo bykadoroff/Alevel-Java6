@@ -10,6 +10,19 @@ public class QuickSort {
         int opora = array[middle];
 
         int i = low, j = high;
+        partition(array, low, high, opora, i, j);
+
+        if (low < j) {
+            quickSort(array, low, j);
+        }
+        if (high > i) {
+            quickSort(array, i, high);
+        }
+
+        return array;
+    }
+
+    private static void partition(int[] array, int low, int high, int opora, int i, int j) {
         while (i <= j) {
             while (array[i] < opora) {
                 i++;
@@ -25,12 +38,5 @@ public class QuickSort {
                 j--;
             }
         }
-        if (low < j) {
-            quickSort(array, low, j);
-        }
-        if (high > i) {
-            quickSort(array, i, high);
-        }
-        return array;
     }
 }
