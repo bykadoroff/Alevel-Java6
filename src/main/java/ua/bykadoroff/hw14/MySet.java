@@ -20,11 +20,8 @@ public class MySet<T> {
         if (index >= array.length) {
             throw new IllegalStateException("Array is overflowed!!!");
         }
-
-        if (!contains(element)) {
-            array[index] = element;
-            index++;
-        }
+        array[index] = element;
+        index++;
     }
 
     public T get(int index) {
@@ -35,11 +32,13 @@ public class MySet<T> {
         return array[index];
     }
 
-    public void printElements() {
+    @Override
+    public String toString() {
+        String result = "";
         for (int i = 0; i < index; i++) {
             System.out.print(array[i] + " ");
         }
-        System.out.println();
+        return result;
     }
 
     private boolean contains(T element) {
