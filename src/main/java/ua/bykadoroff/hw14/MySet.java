@@ -3,11 +3,9 @@ package ua.bykadoroff.hw14;
 public class MySet<T> {
 
     private T[] array;
-    private int arraySize;
     private int index = 0;
 
     MySet(int size) {
-        this.arraySize = size;
         array = (T[]) new Object[size];
     }
 
